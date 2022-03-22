@@ -15,4 +15,5 @@ func main() {
 	fmt.Scanln(&n1, &n2)
 	//fmt.Scanf("%d %d\n", &n1, &n2)
 	fmt.Println(n1, n2)
+
 }
