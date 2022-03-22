@@ -1,0 +1,42 @@
+package main
+
+import "fmt"
+
+func main() {
+	var userChoice, n1, n2, result int
+LOOP:
+	for {
+		fmt.Println("Enter your choice")
+		fmt.Println("1. Add")
+		fmt.Println("2. Subtract")
+		fmt.Println("3. Multiply")
+		fmt.Println("4. Divide")
+		fmt.Println("5. Exit")
+		fmt.Scanln(&userChoice)
+
+		switch userChoice {
+		case 1:
+			fmt.Println("Enter the nos :")
+			fmt.Scanln(&n1, &n2)
+			result = n1 + n2
+		case 2:
+			fmt.Println("Enter the nos :")
+			fmt.Scanln(&n1, &n2)
+			result = n1 - n2
+		case 3:
+			fmt.Println("Enter the nos :")
+			fmt.Scanln(&n1, &n2)
+			result = n1 * n2
+		case 4:
+			fmt.Println("Enter the nos :")
+			fmt.Scanln(&n1, &n2)
+			result = n1 / n2
+		case 5:
+			break LOOP
+		default:
+			fmt.Println("invalid choice")
+			continue LOOP
+		}
+		fmt.Printf("Result = %d\n", result)
+	}
+}
