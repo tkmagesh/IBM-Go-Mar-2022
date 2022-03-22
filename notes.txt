@@ -65,6 +65,9 @@ Creating builds for different environments (https://go.dev/doc/install/source#en
 Creating a build in a different name
     go build -o hw hello-world.go
 
+Curated list of libraries & frameworks
+    https://github.com/avelino/awesome-go
+
 Data Types in Go
     string
     bool
