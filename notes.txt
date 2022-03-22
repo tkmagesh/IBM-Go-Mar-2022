@@ -113,3 +113,6 @@ Assignment:02
     If the user enters any other choice 
         display "Invalid choice" 
         display the menu again.
+
+Functions
+    - Variadic functions
