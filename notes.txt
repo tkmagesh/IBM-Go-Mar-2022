@@ -1,0 +1,91 @@
+Magesh Kuppan
+
+Schedule:
+    Commence    : 9:30 AM
+    Tea break   : 11:00 AM (20 mins)
+    Lunch break : 1:00 PM (1 hr)
+    Tea break   : 3:30 PM (20 mins)
+    Wind up     : 5:30 PM
+
+Methodolgy:
+    No powerpoints
+    100% hands on driven
+    At least 50% of the participants should have completed the assignments for us to proceed
+
+About You:
+    Name
+    Experience
+    Primary skillset
+    Experience in Go (if any)
+    Any interesting books / shows you read / watched in the recent times
+
+
+Why Go?
+
+    1. Concurrency
+    2. Easy to adopt language
+    3. More lightweight (adaptable for Cloud / distributed applications)
+    4. Good documentation
+    5. Smaller memory footprint
+
+    1. Simplicity
+        ONLY 25 keywords
+        No access modifiers
+        No class (only structs)
+        No inheritance (only composition)
+        No exceptions (only errors & panics)
+        No pointer arithmetic
+        No "reference" types
+        No implicit type conversions
+
+    2. Cloud Friendly
+        Compile to native code
+        Performance is equivalent to c++
+
+    3. Concurrency
+        (The ability to have more than one "execution path" in the application)
+        Every goroutine takes only 4 KB of memory
+        Can execute 1000s of goroutine using 1 OS thread
+        Go language is built for Concurrency
+        Language constructs for Concurrency
+            go, select, range, close, channel (data type), <- (channel operator)
+            APIs - sync package
+
+Software requirements
+    1. Go tools 
+    2. Visual Studio Code (https://code.visualstudio.com)
+    
+Golang documentation
+    https://pkg.go.dev/std
+
+
+Creating builds for different environments (https://go.dev/doc/install/source#environment)
+    GOOS=windows GOARCH=amd64 go build hello-world.go
+
+Creating a build in a different name
+    go build -o hw hello-world.go
+
+Data Types in Go
+    string
+    bool
+
+    int
+    int8
+    int16
+    int32
+    int64
+
+    uint
+    uint8
+    uint16
+    uint32
+    uint64
+
+    float32
+    float64
+
+    complex64 (real [float32] + imaginary [float32])
+    complex128 (real [float64] + imaginary [float64])
+
+    byte (alias for uint8)
+    rune (alias for int32) (Unicode code point)
