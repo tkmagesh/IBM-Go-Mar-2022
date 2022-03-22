@@ -116,3 +116,7 @@ Assignment:02
 
 Functions
     - Variadic functions
+    - anonymous functions
+
+Assignment:03:
+    Refactor the Assignment:02 solution using functions
