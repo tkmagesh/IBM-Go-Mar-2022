@@ -124,4 +124,5 @@ func main() {
 		blue
 	)
 	fmt.Println("red =", red, "green =", green, "blue =", blue)
+
 }
