@@ -14,19 +14,22 @@ func main() {
 		fmt.Println(no2)
 	*/
 	fmt.Println("Before incrementing, no = ", no)
-	increment(&no)
+	increment(nil)
 	fmt.Println("After incrementing, no = ", no)
 
 	x, y := 10, 20
 	fmt.Printf("Before swapping, x = %d and y = %d\n", x, y)
-	swap( /*  */ )
+	swap(&x, &y)
 	fmt.Printf("After swapping, x = %d and y = %d\n", x, y)
 }
 
 func increment(x *int) {
+	if x == nil {
+		return
+	}
 	*x++
 }
 
-func swap( /*  */ ) {
-
+func swap(n1, n2 *int) {
+	*n1, *n2 = *n2, *n1
 }
