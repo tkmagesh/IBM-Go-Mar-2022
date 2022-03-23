@@ -95,7 +95,9 @@ func main() {
 	fmt.Println(productRanks)
 
 	fmt.Printf("\nAccessing a value by key\n")
-	fmt.Printf("Rank of Mouse is : %d\n", productRanks["Mouse"])
+	val, exists := productRanks["Mouse"]
+	//fmt.Printf("Rank of Mouse is : %d\n", )
+	fmt.Println(val, exists)
 
 	fmt.Printf("\nChecking for the existence of a key\n")
 	keyToCheck := "Stylus"
