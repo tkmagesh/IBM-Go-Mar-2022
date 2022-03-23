@@ -26,9 +26,9 @@ func processUserChoice(userChoice int) {
 		n1, n2 := getOperands()
 		result := operation(n1, n2)
 		fmt.Printf("Result = %d\n", result)
-	} else {
-		fmt.Println("invalid choice")
+		return
 	}
+	fmt.Println("invalid choice")
 }
 
 func getUserChoice() int {

@@ -111,5 +111,4 @@ func main() {
 	keyToRemove := "Stylus"
 	delete(productRanks, keyToRemove)
 	fmt.Printf("After deleting %q, productRanks = %v\n", keyToRemove, productRanks)
-
 }
