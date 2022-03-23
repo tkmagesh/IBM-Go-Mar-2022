@@ -130,5 +130,8 @@ Collections
     - Arrays
         fixed size collection of data of the same type
     - Slices
+        varying size collection of data of the same type
+            len - # of values from the underlying array that are accessible through the slice
+            capacity - memory allocation
     - Maps
 

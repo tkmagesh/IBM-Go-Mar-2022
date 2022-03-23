@@ -28,4 +28,24 @@ func main() {
 	for _, val := range nos {
 		fmt.Println(val)
 	}
+
+	//slice
+	fmt.Printf("\nSlice\n")
+	//var products []string
+	//var products []string = []string{"Pen", "Pencil", "Marker"}
+	products := []string{"Pen", "Pencil", "Marker"}
+	fmt.Println(products)
+	fmt.Println("append")
+
+	//adding 1 item
+	products = append(products, "Scribble-pad")
+
+	//adding more than 1 item
+	products = append(products, "Mouse", "Charger")
+
+	//adding items from another slice
+	anotherList := []string{"ipad", "macbook"}
+	products = append(products, anotherList...)
+
+	fmt.Println(products)
 }
