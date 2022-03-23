@@ -48,4 +48,24 @@ func main() {
 	products = append(products, anotherList...)
 
 	fmt.Println(products)
+
+	//slicing
+	/*
+		[lo:hi] => from lo to hi-1
+		[lo:] => from lo to the end of the list
+		[:hi] => from 0 to hi-1
+		[:] => copy of the slice
+	*/
+
+	fmt.Println("products[2:5] => ", products[2:5])
+	fmt.Println("products[:5] => ", products[:5])
+	fmt.Println("products[5:] => ", products[5:])
+
+	/*
+		productsCopy := products[:]
+	*/
+	var productsCopy []string = make([]string, len(products))
+	copy(productsCopy, products)
+	products[0] = "mechanical-pen"
+	fmt.Printf("products = %v, productsCopy = %v\n", products, productsCopy)
 }

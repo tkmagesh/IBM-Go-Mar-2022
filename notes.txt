@@ -135,3 +135,5 @@ Collections
             capacity - memory allocation
     - Maps
 
+Assignment:04
+    Create a function "generatePrimes" that will return a collection of prime numbers between 'start' to 'end'
