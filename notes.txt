@@ -117,6 +117,11 @@ Assignment:02
 Functions
     - Variadic functions
     - anonymous functions
+    - higher order functions
+        functions can be treated as values
+        * assign functions as values to variables
+        * pass functions as arguments to other functions
+        * return functions as return values from other functions
 
 Assignment:03:
     Refactor the Assignment:02 solution using functions
