@@ -9,17 +9,21 @@ func main() {
 	add(100, 200)
 	subtract(100, 200)
 
-	logOperation(add, 100, 200)
+	//logOperation(add, 100, 200)
+	logAdd := getLogOperation(add)
 	logAdd(100, 200)
 
-	logOperation(subtract, 100, 200)
+	//logOperation(subtract, 100, 200)
+	logSubtract := getLogOperation(subtract)
 	logSubtract(100, 200)
 }
 
-func logOperation(operation func(int, int), x, y int) {
-	fmt.Println("Before invocation")
-	operation(x, y)
-	fmt.Println("After invocation")
+func getLogOperation(operation func(int, int)) func(int, int) {
+	return func(x, y int) {
+		fmt.Println("Before invocation")
+		operation(x, y)
+		fmt.Println("After invocation")
+	}
 }
 
 func add(x, y int) {
