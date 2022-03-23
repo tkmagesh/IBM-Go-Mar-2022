@@ -51,3 +51,7 @@ func divide(x, y int) (quotient, remainder int) {
 	remainder = x % y
 	return
 }
+
+func divide() {
+
+}

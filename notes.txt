@@ -125,3 +125,10 @@ Functions
 
 Assignment:03:
     Refactor the Assignment:02 solution using functions
+
+Collections
+    - Arrays
+        fixed size collection of data of the same type
+    - Slices
+    - Maps
+
