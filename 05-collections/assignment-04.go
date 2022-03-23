@@ -8,7 +8,9 @@ func main() {
 }
 
 func generatePrimes(start, end int) []int {
-	result := make([]int, 0, 0)
+	//result := make([]int, 0, 0)
+	//result := []int{}
+	var result []int
 	for i := 3; i <= 100; i++ {
 		var is_prime = true
 		for n := 2; n <= (i / 2); n++ {
