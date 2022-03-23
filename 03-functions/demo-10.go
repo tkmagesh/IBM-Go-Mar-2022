@@ -44,6 +44,9 @@ func divideClient(x, y int) (quotient, remainder int, err error) {
 
 //library function
 func divide(x, y int) (quotient, remainder int) {
+	if y == 0 {
+		panic(errors.New("invalid arguments. divisor cannot be zero"))
+	}
 	quotient = x / y
 	remainder = x % y
 	return
