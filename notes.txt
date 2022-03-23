@@ -134,6 +134,7 @@ Collections
             len - # of values from the underlying array that are accessible through the slice
             capacity - memory allocation
     - Maps
-
+        collection of key/value pairs
+        
 Assignment:04
     Create a function "generatePrimes" that will return a collection of prime numbers between 'start' to 'end'

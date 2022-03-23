@@ -68,4 +68,46 @@ func main() {
 	copy(productsCopy, products)
 	products[0] = "mechanical-pen"
 	fmt.Printf("products = %v, productsCopy = %v\n", products, productsCopy)
+
+	fmt.Printf("\nMaps\n")
+	//var productRanks map[string]int
+	/*
+		var productRanks map[string]int = make(map[string]int)
+		//productRanks := map[string]int{}
+		productRanks["Pen"] = 2
+	*/
+	//productRanks := map[string]int{"Pen": 2, "Pencil": 1, "Marker": 4, "Scribble-pad": 3}
+	productRanks := map[string]int{
+		"Pen":          2,
+		"Pencil":       1,
+		"Marker":       4,
+		"Scribble-pad": 3,
+	}
+	fmt.Println(productRanks)
+
+	fmt.Println("Iteration over a map")
+	for key, value := range productRanks {
+		fmt.Printf("Key = %s, Value = %d\n", key, value)
+	}
+
+	fmt.Printf("\nAdding a new item\n")
+	productRanks["Mouse"] = 7
+	fmt.Println(productRanks)
+
+	fmt.Printf("\nAccessing a value by key\n")
+	fmt.Printf("Rank of Mouse is : %d\n", productRanks["Mouse"])
+
+	fmt.Printf("\nChecking for the existence of a key\n")
+	keyToCheck := "Stylus"
+	if val, exists := productRanks[keyToCheck]; !exists {
+		fmt.Printf("Product %q does not exist\n", keyToCheck)
+	} else {
+		fmt.Printf("Rank of product %q is %d\n", keyToCheck, val)
+	}
+
+	fmt.Printf("\nRemoving a key\n")
+	keyToRemove := "Stylus"
+	delete(productRanks, keyToRemove)
+	fmt.Printf("After deleting %q, productRanks = %v\n", keyToRemove, productRanks)
+
 }
