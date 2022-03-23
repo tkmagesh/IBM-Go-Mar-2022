@@ -16,8 +16,17 @@ func main() {
 	fmt.Println("Before incrementing, no = ", no)
 	increment(&no)
 	fmt.Println("After incrementing, no = ", no)
+
+	x, y := 10, 20
+	fmt.Printf("Before swapping, x = %d and y = %d\n", x, y)
+	swap( /*  */ )
+	fmt.Printf("After swapping, x = %d and y = %d\n", x, y)
 }
 
 func increment(x *int) {
 	*x++
+}
+
+func swap( /*  */ ) {
+
 }
