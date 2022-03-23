@@ -138,3 +138,60 @@ Collections
         
 Assignment:04
     Create a function "generatePrimes" that will return a collection of prime numbers between 'start' to 'end'
+
+
+Modularity
+
+    environment variables
+        go env
+        go env GOPATH
+
+            GOROOT => Go installation directory
+            GOBIN => Binaries of go tools 
+            GOOS => default OS while creating the build
+            GOARCH => default Architecture while creating the build
+
+    Before Go 1.13
+        GOPATH
+            bin
+            pkg
+            src
+                github.com
+                    tkmagesh77
+                        my-app
+                            main.go
+                                import github.com/tkmagesh77/my-app/pkg-1
+
+                            pkg-1
+                                pkg1.go
+                                pkg1.test.go
+                            pkg-2
+                                pkg2.go
+                                pkg2.test.go
+
+    In Go 1.13 go modules were introduced
+        go.mod 
+            name of the module
+            go runtime version
+            dependencies
+
+        go mod init <module_name>
+
+        packages
+            just folders
+
+    When a module file exists
+        go run .
+        go build .
+
+    to install a 3rd party package
+        go get <package_path>
+
+    to update th go.mod file based on the usage of dependent packages
+        go mod tidy
+
+    to localize the dependencies
+        go mod vendor
+
+    Reference:
+        https://go.dev/ref/mod
