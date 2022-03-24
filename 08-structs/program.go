@@ -19,4 +19,5 @@ func main() {
 		Salary:    10000,
 	}
 	fmt.Printf("%#v\n", emp)
+
 }
