@@ -27,7 +27,8 @@ func main() {
 	*/
 
 	fmt.Println(Format(pen))
-	ApplyDiscount(&pen, 10)
+	//ApplyDiscount(&pen, 10)
+	ApplyCostDiscount(&(pen.Cost), 20)
 	fmt.Println("After applying discount")
 	fmt.Println(Format(pen))
 }
@@ -40,4 +41,8 @@ func ApplyDiscount(productPtr *Product, discount float32) {
 	//dereference
 	//(*productPtr).Cost = (*productPtr).Cost * ((100 - discount) / 100)
 	productPtr.Cost = productPtr.Cost * ((100 - discount) / 100)
+}
+
+func ApplyCostDiscount(productCost *float32, discount float32) {
+	*productCost = *productCost * ((100 - discount) / 100)
 }
