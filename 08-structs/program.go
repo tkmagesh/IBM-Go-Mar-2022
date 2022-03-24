@@ -34,4 +34,6 @@ func main() {
 
 	fmt.Println(e1 == e2) //true
 	fmt.Printf("%p %p\n", &e1, &e2)
+
+	fmt.Println(true && true)
 }
