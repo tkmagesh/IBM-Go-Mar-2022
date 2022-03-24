@@ -6,6 +6,8 @@ import (
 	calc "modularity-demo/calculator" //package alias
 	"modularity-demo/calculator/utils"
 
+	"dep-helpers/helpers"
+
 	"github.com/fatih/color"
 )
 
@@ -20,4 +22,6 @@ func main() {
 
 	//using 3rd party packages
 	color.Red("This line will be printed in red color")
+
+	fmt.Println(helpers.SOS())
 }

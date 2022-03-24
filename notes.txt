@@ -193,5 +193,9 @@ Modularity
     to localize the dependencies
         go mod vendor
 
+    to replace a dependency path
+        go mod edit -replace dep-helpers=/Users/tkmagesh77/Documents/Training/IBM-Go-Mar-2022/dep-module
+        reference : https://thewebivore.com/using-replace-in-go-mod-to-point-to-your-local-module/
+        
     Reference:
         https://go.dev/ref/mod

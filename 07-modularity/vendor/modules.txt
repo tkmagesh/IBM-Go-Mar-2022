@@ -1,3 +1,6 @@
+# dep-helpers v0.0.0-00010101000000-000000000000 => /Users/tkmagesh77/Documents/Training/IBM-Go-Mar-2022/dep-module
+## explicit; go 1.17
+dep-helpers/helpers
 # github.com/fatih/color v1.13.0
 ## explicit; go 1.13
 github.com/fatih/color
@@ -11,3 +14,4 @@ github.com/mattn/go-isatty
 ## explicit; go 1.17
 golang.org/x/sys/internal/unsafeheader
 golang.org/x/sys/unix
+# dep-helpers => /Users/tkmagesh77/Documents/Training/IBM-Go-Mar-2022/dep-module
