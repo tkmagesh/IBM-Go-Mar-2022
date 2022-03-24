@@ -261,3 +261,6 @@ Assignment:9
         Make sure that one CANNOT influence the result bypassing the methods
         ex:
             acc.Value = 2000 => should not be allowed
+
+Assignment:10
+Assignment:11
