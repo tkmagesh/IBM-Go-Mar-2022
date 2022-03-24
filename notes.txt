@@ -246,3 +246,6 @@ Assignment:7
         Use cases:
             1. Are there ANY costly product (cost > 1000) ?
             2. Are there ANY stationary products? (category == "Stationary")
+
+Assignment:8
+    Convert the solution for Assignment:7 (IndexOf, Includes, Filter, All, Any) functions into methods 
