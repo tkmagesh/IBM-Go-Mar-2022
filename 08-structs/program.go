@@ -20,4 +20,18 @@ func main() {
 	}
 	fmt.Printf("%#v\n", emp)
 
+	e1 := Employee{
+		Id:        200,
+		FirstName: "Suresh",
+		Salary:    2000,
+	}
+
+	e2 := Employee{
+		Id:        200,
+		FirstName: "Suresh",
+		Salary:    2000,
+	}
+
+	fmt.Println(e1 == e2) //true
+	fmt.Printf("%p %p\n", &e1, &e2)
 }
