@@ -199,3 +199,16 @@ Modularity
         
     Reference:
         https://go.dev/ref/mod
+
+
+structs
+
+Assignment:6
+    Create a Product struct with the following fields
+        Id, Name, Cost, Units, Category
+
+    Create a "Format" function that will print the product details in the following format
+       Id = <id>, Name = <name>, Cost = <cost>, Units = <units>, Category = <category>
+
+    Create a "ApplyDiscount" function using which one can update the product cost after applying the discount
+        
