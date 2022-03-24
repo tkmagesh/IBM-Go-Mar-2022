@@ -46,15 +46,36 @@ func PrintPerimeter(sp ShapeWithPerimeter) {
 	fmt.Printf("Perimeter = %f\n", sp.Perimeter())
 }
 
+/*
+	x => any type that implements BOTH shapeWithArea & shapeWithPerimeter interfaces
+*/
+
+//interface composition
+type Shape interface {
+	ShapeWithArea
+	ShapeWithPerimeter
+}
+
+func PrintShape(x Shape) {
+	PrintArea(x)
+	PrintPerimeter(x)
+}
+
 func main() {
 	c := Circle{Radius: 12}
 	//fmt.Printf("Area = %f\n", c.Area())
-	PrintArea(c)
-	PrintPerimeter(c)
+	/*
+		PrintArea(c)
+		PrintPerimeter(c)
+	*/
+	PrintShape(c)
 
 	r := Rectangle{Height: 10, Width: 12}
 	//fmt.Printf("Area = %f\n", r.Area())
-	PrintArea(r)
-	PrintPerimeter(r)
+	/*
+		PrintArea(r)
+		PrintPerimeter(r)
+	*/
+	PrintShape(r)
 
 }
