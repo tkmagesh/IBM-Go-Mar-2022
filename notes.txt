@@ -249,3 +249,15 @@ Assignment:7
 
 Assignment:8
     Convert the solution for Assignment:7 (IndexOf, Includes, Filter, All, Any) functions into methods 
+
+Assignment:9
+    Create a type called "Accumulator" with the following methods
+        acc.Add(100)
+        acc.Subtract(50)
+        acc.Multiply(10)
+        acc.Divide(2)
+        acc.Value() => 250
+    NOTE:
+        Make sure that one CANNOT influence the result bypassing the methods
+        ex:
+            acc.Value = 2000 => should not be allowed

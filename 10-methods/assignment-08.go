@@ -16,6 +16,10 @@ func Format(p Product) string {
 
 type Products []Product
 
+func (products Products) Print() {
+	fmt.Println(products.Format())
+}
+
 func (products Products) Format() string {
 	result := ""
 	for _, product := range products {
@@ -78,7 +82,8 @@ func main() {
 
 	fmt.Println("Initial List")
 	//fmt.Println(FormatProducts(products))
-	fmt.Println(products.Format())
+	//fmt.Println(products.Format())
+	products.Print()
 
 	fmt.Println("Index Of:")
 	marker := Product{103, "Marker", 50, 20, "Utencil"}
@@ -96,7 +101,8 @@ func main() {
 	}
 	//stationaryProducts := Filter(products, stationaryProductPredicate)
 	stationaryProducts := products.Filter(stationaryProductPredicate)
-	fmt.Println(stationaryProducts.Format())
+	//fmt.Println(stationaryProducts.Format())
+	stationaryProducts.Print()
 
 	fmt.Println("Costly Products:")
 	constlyProductPredicate := func(product Product) bool {
@@ -104,7 +110,8 @@ func main() {
 	}
 	//costlyProducts := Filter(products, constlyProductPredicate)
 	costlyProducts := products.Filter(constlyProductPredicate)
-	fmt.Println(costlyProducts.Format())
+	//fmt.Println(costlyProducts.Format())
+	costlyProducts.Print()
 
 	fmt.Printf("\nAll:\n")
 	//fmt.Println("Are all products stationary products ? :", All(products, stationaryProductPredicate))
