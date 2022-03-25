@@ -17,6 +17,7 @@ func main() {
 	for i := 0; i < 100; i++ {
 		<-doneCh
 	}
+
 	fmt.Println("counter = ", counter)
 	fmt.Println("main completed")
 }
@@ -25,4 +26,5 @@ func fn(done chan bool) {
 	counter = counter + 1
 	fmt.Println(counter)
 	done <- true
+	fmt.Println("fn completed")
 }
