@@ -264,3 +264,8 @@ Assignment:9
 
 Assignment:10
 Assignment:11
+
+Concurrency
+    Assumptions that one should NEVER make:
+        1. the time taken for a goroutine to complete
+            instead wait for the signal from the goroutine to complete (using sync.WaitGroup etc)

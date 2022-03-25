@@ -6,18 +6,18 @@ import (
 )
 
 func main() {
-	fmt.Println(sum(10, 20))                                                 //=> 30
-	fmt.Println(sum(10, 20, 30, 40))                                         //=> 100
-	fmt.Println(sum(10))                                                     //=> 10
-	fmt.Println(sum())                                                       //=> 0
-	fmt.Println(sum(10, "20", 30, "40"))                                     //=> 100
-	fmt.Println(sum(10, "20", 30, "40", "abc"))                              //=> 100
-	fmt.Println(sum(10, 20, []int{30, 40}))                                  //=> 100
-	fmt.Println(sum(10, 20, []interface{}{30, 40, []int{10, 20}}))           //=> 130
-	fmt.Println(sum(10, 20, []interface{}{30, 40, []interface{}{10, "20"}})) //=> 130
+	fmt.Println(sum(10, 20))                                 //=> 30
+	fmt.Println(sum(10, 20, 30, 40))                         //=> 100
+	fmt.Println(sum(10))                                     //=> 10
+	fmt.Println(sum())                                       //=> 0
+	fmt.Println(sum(10, "20", 30, "40"))                     //=> 100
+	fmt.Println(sum(10, "20", 30, "40", "abc"))              //=> 100
+	fmt.Println(sum(10, 20, []int{30, 40}))                  //=> 100
+	fmt.Println(sum(10, 20, []any{30, 40, []int{10, 20}}))   //=> 130
+	fmt.Println(sum(10, 20, []any{30, 40, []any{10, "20"}})) //=> 130
 }
 
-func sum(data ...interface{}) int {
+func sum(data ...any) int {
 	result := 0
 	for _, v := range data {
 		switch val := v.(type) {
@@ -27,10 +27,10 @@ func sum(data ...interface{}) int {
 			if no, ok := strconv.Atoi(val); ok == nil {
 				result += no
 			}
-		case []interface{}:
+		case []any:
 			result += sum(val...)
 		case []int:
-			intfList := make([]interface{}, len(val))
+			intfList := make([]any, len(val))
 			for i, v := range val {
 				intfList[i] = v
 			}
