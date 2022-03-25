@@ -269,3 +269,7 @@ Concurrency
     Assumptions that one should NEVER make:
         1. the time taken for a goroutine to complete
             instead wait for the signal from the goroutine to complete (using sync.WaitGroup etc)
+
+
+    To detect race conditions   
+         go run --race <program.go>
