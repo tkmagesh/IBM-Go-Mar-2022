@@ -279,3 +279,4 @@ Concurrency
 
         Channel write operation is also a blocking operation (conditions apply)
             ie., a write operation can be successful ONLY if a read operation is initiated
+            BUT, if the channel is a "buffered" channel, then the write operation can be successful even if no read operation is initiated
