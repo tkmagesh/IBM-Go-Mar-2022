@@ -18,9 +18,11 @@ func main() {
 	fmt.Println("main completed")
 }
 
-func add(x, y int) chan int {
+func add(x, y int) <-chan int {
 	ch := make(chan int)
-	result := x + y
-	ch <- result
+	go func() {
+		result := x + y
+		ch <- result
+	}()
 	return ch
 }
