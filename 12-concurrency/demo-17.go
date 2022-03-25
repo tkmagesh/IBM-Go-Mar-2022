@@ -27,9 +27,9 @@ func genPrimes() chan int {
 		for {
 			if isPrime(no) {
 				select {
-				case <-timeOutCh:
+				case <-timeOutCh: //attempt to read the data from timeOutCh
 					break LOOP
-				case primeNoCh <- no:
+				case primeNoCh <- no: //attempt to write data into the primeNoCh
 					time.Sleep(300 * time.Millisecond)
 				}
 			}
