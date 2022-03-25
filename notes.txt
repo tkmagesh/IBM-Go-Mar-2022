@@ -273,3 +273,9 @@ Concurrency
 
     To detect race conditions   
          go run --race <program.go>
+
+    Channel
+        Channel read operation is ALWAYS a blocking operation
+
+        Channel write operation is also a blocking operation (conditions apply)
+            ie., a write operation can be successful ONLY if a read operation is initiated
