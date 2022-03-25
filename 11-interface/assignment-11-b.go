@@ -29,71 +29,29 @@ func (products Products) String() string {
 	return result
 }
 
-func (products Products) Sort(attrName string) {
-	switch attrName {
-	case "Id":
-		sort.Sort(products)
-	case "Name":
-		sort.Sort(byName{products})
-	case "Cost":
-		sort.Sort(byCost{products})
-	case "Units":
-		sort.Sort(byUnits{products})
-	case "Category":
-		sort.Sort(byCategory{products})
-	default:
-		sort.Sort(products)
+func (products Products) Sort(attrName string) error {
+	var productComparers = map[string]func(int, int) bool{
+		"Id": func(i, j int) bool {
+			return products[i].Id < products[j].Id
+		},
+		"Name": func(i, j int) bool {
+			return products[i].Name < products[j].Name
+		},
+		"Cost": func(i, j int) bool {
+			return products[i].Cost < products[j].Cost
+		},
+		"Units": func(i, j int) bool {
+			return products[i].Units < products[j].Units
+		},
+		"Category": func(i, j int) bool {
+			return products[i].Category < products[j].Category
+		},
 	}
-
-}
-
-//implementation of sort.Interface interface
-func (products Products) Len() int {
-	return len(products)
-}
-
-func (products Products) Swap(i, j int) {
-	products[i], products[j] = products[j], products[i]
-}
-
-func (products Products) Less(i, j int) bool {
-	return products[i].Id < products[j].Id
-}
-
-//sort by Name
-type byName struct {
-	Products
-}
-
-func (products byName) Less(i, j int) bool {
-	return products.Products[i].Name < products.Products[j].Name
-}
-
-//sort by Cost
-type byCost struct {
-	Products
-}
-
-func (products byCost) Less(i, j int) bool {
-	return products.Products[i].Cost < products.Products[j].Cost
-}
-
-//sort by Units
-type byUnits struct {
-	Products
-}
-
-func (products byUnits) Less(i, j int) bool {
-	return products.Products[i].Units < products.Products[j].Units
-}
-
-//sort by Name
-type byCategory struct {
-	Products
-}
-
-func (products byCategory) Less(i, j int) bool {
-	return products.Products[i].Category < products.Products[j].Category
+	if comparer, exists := productComparers[attrName]; exists {
+		sort.Slice(products, comparer)
+		return nil
+	}
+	return fmt.Errorf("Comparer for %s does not exist", attrName)
 }
 
 func main() {
